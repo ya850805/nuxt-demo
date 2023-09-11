@@ -1,0 +1,1 @@
+console.log('這是a.js的內容')
