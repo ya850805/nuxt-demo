@@ -1,6 +1,8 @@
 <template>
-  <Title>這是Title(使用標籤最優先)</Title>
-  <h1>This is head demo pages</h1>
+  <div>
+    <Title>這是Title(使用標籤最優先)</Title>
+    <h1>This is head demo pages</h1>
+  </div>
 </template>
 
 <script setup lang="ts">

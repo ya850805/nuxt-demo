@@ -1,13 +1,16 @@
 <template>
   <div>
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage/>
+    </NuxtLayout>
+
+    {{ foo }}
   </div>
 </template>
 
-<script>
-export default {
-  name: "app"
-}
+<script setup lang="ts">
+//auto import
+const foo = useFoo()
 </script>
 
 <style scoped>
