@@ -7,6 +7,8 @@
     {{ foo }}
 
     <GoodItem></GoodItem>
+
+    {{ config.public.var2 }}
   </div>
 </template>
 
@@ -14,6 +16,8 @@
 
 //auto import
 const foo = useFoo()
+
+const config = useRuntimeConfig()
 </script>
 
 <style scoped>

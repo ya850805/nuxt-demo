@@ -1,12 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  app: {
-    baseURL: '/nuxt-demo/'
-  }
-} : {}
-
 export default defineNuxtConfig({
   modules: ["nuxt-facebook-chat"],
   devtools: { enabled: true },
-  ...routerBase,
+  app: {
+    baseURL: '/nuxt-demo/',
+    buildAssetsDir: 'assets'
+  },
+  runtimeConfig: {
+    var1: '123',
+    public: {
+      var2: '456'
+    }
+  }
 })
