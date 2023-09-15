@@ -9,7 +9,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     var1: '123',
     public: {
-      var2: '456'
+      var2: '456',
+      lineNotifyToken: ''
     }
   }
 })
