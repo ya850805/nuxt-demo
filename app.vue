@@ -14,6 +14,7 @@
 
     <input type='text' v-model="message" /> <br>
     <button @click="sendLineNotify">發送Line notify</button>
+    <button @click="lineBotSendMessage">line bot發送消息</button>
   </div>
 </template>
 
@@ -28,6 +29,15 @@ const message = ref('123')
 function sendLineNotify() {
 
   useFetch(`/api/sendLineNotify`, {
+    method: 'post',
+    body: {
+      'message' : message
+    }
+  })
+}
+
+function lineBotSendMessage() {
+  useFetch('/api/lineBotPush', {
     method: 'post',
     body: {
       'message' : message

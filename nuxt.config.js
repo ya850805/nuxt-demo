@@ -10,7 +10,9 @@ export default defineNuxtConfig({
     var1: '123',
     public: {
       var2: '456',
-      lineNotifyToken: ''
+      lineNotifyToken: '',
+      lineBotChannelAccessToken: '',
+      lineUserId: ''
     }
   }
 })
