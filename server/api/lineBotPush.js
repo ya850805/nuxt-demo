@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
 
     const body = await readBody(event)
     const userMessage = {
-        "to": config.public.lineUserId,
+        "to": config.lineUserId,
         "messages": [
             {
                 "type": "text",
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
 
     $fetch('https://api.line.me/v2/bot/message/push', {
         headers: {
-            'Authorization': `Bearer ${config.public.lineBotChannelAccessToken}`,
+            'Authorization': `Bearer ${config.lineBotChannelAccessToken}`,
         },
         method: 'post',
         body: JSON.stringify(userMessage)
